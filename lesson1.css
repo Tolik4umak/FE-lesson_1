@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+
+    --colorSecondary: #efecf5;
+}
+body, html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ccc;
+}
+
+.wrapper{
+    border-radius: 10px;
+    background-color: #fff;
+    width: 1200px;
+    height: 800px;
+    display: flex;
+}
+
+.container{
+    padding: 30px 20px;
+}
+.container--grayborder-r{
+    border-right: 2px solid #ccc;
+}
+
+/* aside */
+aside{
+    width: 20%;
+    background-color: var(--colorSecondary);
+
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside__help{
+    background-color: rgb(221, 212, 235);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* main */
+main{
+    flex: 1 1;
+}
+
+.main__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--colorSecondary);
+    padding-bottom: 120px;
+}
+
+.header--grayborder-b{
+    border-bottom: 2px solid #ccc;
+}
+
+
+.hornav__list{
+    display: flex;
+}
+.hornav__link{
+    padding: 10px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+.user__name{
+    padding-right: 10px;
+}
+.user__avatar{
+    width: 35px;
+    height: 35px;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+
+        /*article  */
+.bankcards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3%;
+    margin-top: -120px;
+    padding-bottom: 30px;
+}
+
+.bankcards__card{
+    border-radius: 10px;
+    width: calc(33% - 3%);
+    height: auto;
+    aspect-ratio: 2/1;
+    box-shadow: rgba(100, 100, 111, 0.075) 0px 7px 29px 0px;
+}
+
+
+
+.transactions--borders{
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+.transactions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.transactions__graphik{
+    width: calc(33% - 3%);
+    height: 70px;
+    background-color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* modificators */
+
+.col-blue{
+    background-color: rgb(185, 199, 218);
+}
+.col-yellow{
+    background-color: rgb(235, 221, 208);
+    
+}
+.col-green{
+    background-color: rgb(189, 218, 185);
+    
+}
+
