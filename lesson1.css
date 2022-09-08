@@ -5,7 +5,7 @@
     text-decoration: none;
     color: inherit;
     box-sizing: border-box;
-
+    font-family: 'Roboto', sans-serif;
     --colorSecondary: #efecf5;
 }
 body, html{
@@ -14,18 +14,16 @@ body, html{
 
 body{
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: #ccc;
 }
 
 .wrapper{
     border-radius: 10px;
     background-color: #fff;
-    width: 1200px;
-    height: 800px;
+    width: 100%;
+    min-height: 100%;
     display: flex;
+    justify-content: flex-end;
 }
 
 .container{
@@ -37,23 +35,30 @@ body{
 
 /* aside */
 aside{
-    width: 20%;
+    width: 200px;
     background-color: var(--colorSecondary);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
 
 }
 
 .aside{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    position: relative;
 }
 
 .aside__help{
     background-color: rgb(221, 212, 235);
-    width: 100%;
     height: auto;
-    aspect-ratio: 1;
+    aspect-ratio: 0.75;
     border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
 }
 
 
@@ -62,8 +67,10 @@ aside{
 
 
 /* main */
+
+        /* header  */
 main{
-    flex: 1 1;
+    width: calc(100% - 200px);
 }
 
 .main__header{
@@ -74,31 +81,72 @@ main{
     padding-bottom: 120px;
 }
 
-.header--grayborder-b{
-    border-bottom: 2px solid #ccc;
-}
-
-
-.hornav__list{
+.main__search{
+    background-color: #fff;
     display: flex;
+    padding-left: .5rem;
+    align-items: center;
+    border-radius: 4px;
 }
-.hornav__link{
-    padding: 10px;
+.main__search i{
+   font-size: 1.5rem;
+   color: #bebebe;
 }
+.main__search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.main__search input::placeholder{
+    font-weight: 800;
+}
+.button-icon{
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+.button-icon:hover{
+    color: #4c39c7;
+}
+
+.links *:not(:last-child){
+    margin-right: 2rem;
+}
+.link{
+    color: #a0a1aa;
+}
+
+.link--bold{
+    font-weight: 600;
+}
+.link--medium{
+    font-size: 1.5rem;
+}
+
 
 .user{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.user__name{
-    padding-right: 10px;
+.user__greetings{
+    margin-right: 1rem;
 }
-.user__avatar{
+.avatar{
     width: 35px;
     height: 35px;
     background-color: orange;
-    border-radius: 10px;
+    border-radius: 7px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+
+
+
+
 
 
         /*article  */
