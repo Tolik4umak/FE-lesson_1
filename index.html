@@ -18,16 +18,27 @@
 
     <div class="wrapper">
 
+        <!-- <div class="burger" onclick="toggleMenu()">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg> 
+        </div> -->
+        <div class="burger" onclick="toggleMenu()">
+           <div class="burger__line "></div>
+           <div class="burger__line "></div>
+           <div class="burger__line "></div>
+        </div>
+
         <aside class="aside container-20 border-r">
 
             <menu class="aside__menu">
                 
-                <header class="aside__header header mb-30">
+               
+                <a class="aside__header header mb-30" href="#">
                     <i class="aside__icon las la-skull-crossbones"></i>
                     <h2 class="aside__title">
                         Super finti
                     </h2>
-                </header>
+                </a>
+               
 
                 <nav class="nav mb-30">
                     <h3 class="nav__title">
@@ -197,6 +208,7 @@
             </header>
 
             <article class="article">
+
                 <div class="bankcards container">
 
                     <div class="bankcards__card col-blue bankcardone">
@@ -362,8 +374,6 @@
                             </div>
 
                         </div>
-                        
-                        
 
                     </div>
                 </div>
@@ -638,8 +648,6 @@
                     
                     </div>
 
-                    
-
                 </div>
 
             </article>
@@ -647,6 +655,28 @@
         </main>
 
     </div>
+
+
+
+    <script>
+
+        function toggleMenu() {
+            let aside = document.querySelector('.aside');
+            let burger = document.querySelector('.burger');
+            let burger__line = document.querySelectorAll('.burger__line');
+          
+
+
+            aside.classList.toggle('aside--open');
+            burger.classList.toggle('burger--open');
+            for(let i =0;i<burger__line.length;i++){
+                burger__line[i].classList.toggle('burger__line--open');
+            }
+
+           
+        }
+
+    </script>
 </body>
 
 

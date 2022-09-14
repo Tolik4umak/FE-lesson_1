@@ -41,7 +41,9 @@ body, html{
 
 
 
-
+.burger{
+    display: none;
+}
 
 
 /* aside */
@@ -78,13 +80,14 @@ aside{
     color: var(--textcolor-granit);
     text-transform: capitalize;
 }
-.nav__list>:not(:last-child){
-    margin-bottom: 20px;
-}
 .nav__item{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 5px;
+}
+.nav__item:hover{
+    background-color: rgba(255, 255, 255, 0.726);
 }
 .nav__link{
     display: flex;
@@ -207,8 +210,8 @@ aside{
 
        
 main{
-    width: calc(100% - 200px);
-    margin-left: auto;
+    /* width: calc(100% - 200px); */
+    margin-left: 200px;
 }
 
              /* header  */  
@@ -219,6 +222,7 @@ main{
     background-color: var(--bgSecondary);
 }
 .main__search{
+    width: 25%;
     background-color: #fff;
     display: flex;
     padding-left: .5rem;
@@ -329,7 +333,7 @@ main{
 }
 .bankcards__title{
     text-transform: capitalize;
-    font-size: calc(0.7vw + 2px);
+    font-size: 10px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -348,12 +352,13 @@ main{
     align-items: baseline;
 }
 .bankcardone__balance{
-    font-size: calc(1.8vw + 2px);
+    font-size: 24px;
     font-weight: bold;
     align-items: baseline;
     text-transform: uppercase;
 }
 .bankcardone__currency{
+    font-size: 12px;
     outline: none;
     border: none;
     background: none;
@@ -372,6 +377,7 @@ main{
     height: auto;
     aspect-ratio: 1;
     text-align: center;
+    line-height: 15px;
 }
 
 .bankcardtwo__footer{
@@ -397,36 +403,38 @@ main{
 }
 .bankcardtwo__persent{
     font-weight: bold;
-    font-size: calc(1.2vw + 2px);
+    font-size: 16px;
     color: rgb(201, 41, 20);
 }
 .bankcardtwo__desc{
-    font-size: calc(.8vw + 2px);
+    font-size: 12px;
     font-weight: bold;
 }
 .bankcardthree__title{
-    font-size: calc(2.5vw + 5px);
+    font-size: 41px;
 }
 .bankcardthree__text{
-    font-size: calc(0.7vw + 2px);
+    font-size: 10px;
     font-weight: bold;
     color: var(--textcolor-gray);
 }
 .bankcardthree__number{
-    font-size: calc(1.3vw + 2px);
+    font-size: 18px;
     font-weight: bold;
-    letter-spacing: .2rem;
+    letter-spacing: 3px;
     white-space: nowrap;
 }
 .bankcardthree__info{
     display: flex;
     justify-content: space-between;
     width: 80%;
+}
+.bankcardthree__info:first-child{
     margin-bottom: 5px;
 }
 .bankcardthree__personal{
     font-weight: bold;
-    font-size: calc(1vw + 2px);
+    font-size: 16px;
 
 }
 
@@ -511,6 +519,7 @@ main{
 /* History payment */
 .history{
   display: flex;
+  flex-wrap: wrap;
 }
 .history--60{
     width: 60%;
@@ -556,6 +565,7 @@ main{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    gap: 5px;
 }
 .action_desc{
     display: flex;
@@ -747,4 +757,431 @@ main{
 }
 .h-10{
     height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 991px) and (max-width: 1199px) {
+
+     /*article  */
+   
+    .bankcards__card{
+        padding: 10px;
+    }
+    .bankcardone__balance{
+        font-size: 18px;
+    }
+    .bankcardone__currency{
+        font-size: 10px;
+    }
+    .bankcardtwo__icon{
+        width: 35px;
+        height: 35px;
+        font-size: 23px;
+        line-height: 36px;
+    }
+    .bankcardtwo__persent{
+        font-size: 14px;
+    }
+    .bankcardtwo__desc{
+        font-size: 10px;
+    }
+    .bankcardthree__title{
+        font-size: 35px;
+    }
+    .bankcardthree__number{
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .bankcardthree__personal{
+        font-weight: bold;
+        font-size: 12px;
+    
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    /* main 
+            header
+    */
+    
+    .main__search{
+        width: 25%;
+    }
+    .main__search i{
+       font-size: 1.3rem;
+    }
+    .main__search input{
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+    .main-icon{
+        font-size: 1rem;
+    }
+
+
+     /*article  */
+ 
+    .bankcards{
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+    .bankcards__card{
+        width: calc(45%);
+        padding: 10px;
+    }
+    .bankcardone__balance{
+        font-size: 18px;
+    }
+    .bankcardone__currency{
+        font-size: 10px;
+    }
+    .bankcardtwo__icon{
+        width: 35px;
+        height: 35px;
+        font-size: 23px;
+        line-height: 36px;
+    }
+    .bankcardtwo__persent{
+        font-size: 14px;
+    }
+    .bankcardtwo__desc{
+        font-size: 10px;
+    }
+    .bankcardthree__title{
+        font-size: 35px;
+    }
+    .bankcardthree__number{
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .bankcardthree__personal{
+        font-weight: bold;
+        font-size: 12px;
+    
+    }
+
+
+            /* Graphics */
+
+
+    .transactions{
+        padding: 15px 0;
+    }
+    .transaction{
+        height: 70px;
+        gap: 5px;
+    }
+    .transaction__title{
+        font-size: 10px;
+    }
+    .transaction__count{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .transaction__month{
+        font-size: 10px;
+    }
+    .gaph{
+        gap: 4px;
+    }
+
+    .graph__col{
+        width: 12px;
+        border-radius: 5px;
+    }
+
+
+
+        /* History payment */
+    .history--60{
+        width: 100%;
+    }
+    .history--40{
+        width: 100%;
+    }
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    main{
+        margin: 0;
+    }
+    .help{
+        display: none;
+    }
+
+    .aside{
+        transform: translateX(-200px);
+        transition: all 0.5s ease-out;
+        z-index: 1;
+    }
+    .burger{
+        transition: 0.6s ease-in;
+        display: block;
+        position: fixed;
+        border-radius: 5px;
+        left: 10px;
+        top: 10px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .burger__line{
+        width: 30px;
+        height: 3px;
+        background-color: var(--textcolor-violet);
+        margin: 8px auto;   
+        transition: all 0.5s ease-in;
+    }
+    /* animation */
+    .aside--open{
+        transform: none;
+        width: 100%;
+    }
+    .burger--open{
+        left: calc(100% - 55px);
+        z-index: 2;
+        opacity: 100%;
+        transform: rotateZ(90deg);
+        transition: left .6s ease-out , transform .6s ease-out;
+    }
+    .burger__line--open{
+        background-color: var(--textcolor-violet);
+    }
+    .burger__line--open:first-child{
+        transform-origin: left;
+        transform: rotateZ(45deg);
+    }
+    .burger__line--open:nth-child(2){
+        background-color: transparent;
+    }
+    .burger__line--open:last-child{
+        transform-origin: left;
+        transform: rotateZ(-45deg);
+    }
+        /* aside */
+  
+    .aside__icon{
+        font-size: 3rem;
+    }
+    .aside__title{
+        font-size: 25px;
+    }
+    .nav__title{
+        font-size: 17px;
+    }
+    .nav__link i{
+        font-size: 30px;
+    }
+    .nav__text{
+        font-size: 17px;
+    }
+    .nav__arrow{
+        font-size: 20px;
+    }
+
+    /* main 
+            header
+    */
+    .container{
+        padding: 20px;
+    }
+
+    .main__header{
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding-bottom: 70px;
+    }
+    .main__search{
+        width: 70%;
+    }
+    .main__search i{
+       font-size: 1.3rem;
+    }
+    .main__search input{
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+    .main__icons{
+        display: none;
+    }
+    .links{
+        display: none;
+    }
+    .user{
+        width: 100px;
+        align-self: center;
+    }
+    .user__greetings{
+        font-size: 12px;
+    }
+ 
+        /* article */
+    .bankcards{
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+    .bankcards__card{
+        width: calc(90%);
+        padding: 20px;
+    }
+    .bankcards__title{
+        font-size: 2.5vw;
+    }
+    .bankcardone__balance{
+        font-size: 5vw;
+    }
+    .bankcardone__currency{
+        font-size: 2vw;
+    }
+    .bankcardtwo__icon{
+        width: 12vw;
+        height: 12vw;
+        font-size: 6vw;
+        line-height: 12vw;
+    }
+    .bankcardtwo__persent{
+        font-size: 4vw;
+    }
+    .bankcardtwo__desc{
+        font-size: 3vw;
+    }
+    .bankcardthree__title{
+        font-size: 10vw;
+    }
+    .bankcardthree__number{
+        font-size: calc(6vw - 7px);
+        letter-spacing: 3px;
+    }
+    .bankcardthree__text{
+        font-size: 2.5vw;
+    }
+    .bankcardthree__personal{
+        font-weight: bold;
+        font-size: 4vw;
+    
+    }
+
+
+        /* Graphics */
+    .transactions{
+        padding: 15px 0;
+        gap: 20px;
+    }
+    .transaction{
+       width: 100%;
+       gap: 5px;
+    }
+    .transaction__title{
+        font-size: 10px;
+    }
+    .transaction__count{
+        font-size: 16px;
+    }
+    .transaction__month{
+        font-size: 10px;
+    }
+    .gaph{
+        gap: 4px;
+    }
+
+    .graph__col{
+        width: 12px;
+    }
+
+
+        /* History payment */
+    .history--60{
+        width: 100%;
+    }
+    .history--40{
+        width: 100%;
+    }
+    .history__title{
+        font-size: 12px;
+    }
+    .history__icons{
+        font-size: 1.1rem;
+        gap: 10px;
+    }
+    .history__date{
+        font-size: 10px;
+    }
+    .action__icon{
+        width: 40px;
+        height: 40px;
+    }
+    .action__origin{
+        font-size: 12px;
+    }
+    .action__status{
+        font-size: 12px;
+    }
+    .action__money{
+        font-size: 12px;
+    }
+    
 }
